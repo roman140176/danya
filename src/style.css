@@ -12,7 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  box-sizing: border-box;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -58,11 +60,59 @@ button:focus-visible {
   padding: 2em;
 }
 
+.close{
+  top: 0;
+  right: 0;
+  z-index: 200;
+}
+.danya{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+.danya__img{
+  width: 150px;
+  height: 150px;
+}
+.danya__img img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.button{
+  background-color: #535bf2;
+  color: #fff;
+  flex-grow: 1;
+}
+.buttons{
+  justify-content: space-between;
+  gap:10px;
+  margin-bottom: 20px;
+}
 #app {
-  max-width: 1280px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  min-height: 100%;
+}
+#app main{
+  width: 100%;
+  height: 100%;
+}
+.photo-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+.photo-box img{
+  display: block;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: light) {
